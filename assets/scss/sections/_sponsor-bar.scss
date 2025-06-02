@@ -1,0 +1,50 @@
+.sponsor-bar {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  padding: 20px 0;
+
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: scroll 60s linear infinite;
+    animation-play-state: paused; // standaard uit
+  }
+
+  &__sponsor {
+    width: 280px; // Breedte per sponsorlogo
+    flex: 0 0 auto;
+    margin-right: 100px; // Ruimte tussen logos
+    padding: 20px;
+  }
+
+  &__logo {
+    display: block;
+    width: 100%;
+    height: 80px; // Pas aan naar wens
+    object-fit: contain;
+    filter: brightness(10%);
+    transition: filter 0.3s ease;
+
+    &:hover {
+      filter: brightness(100%);
+    }
+  }
+
+  &:hover &__track {
+    animation-play-state: paused; // Stop bij hover
+  }
+
+  &.loaded &__track {
+    animation-play-state: running; // Start animatie bij in beeld
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

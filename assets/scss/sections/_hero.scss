@@ -1,0 +1,35 @@
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $hero-font-color;
+  font-family: "open-sans", sans-serif;
+  height: 40vh;
+  padding-top: 180px;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    margin-bottom: 20px;
+    text-shadow: $hero-text-shadow;
+
+    @include respond-to(mobile) {
+      font-size: 3.438rem;
+    }
+  }
+
+  &__intro {
+    font-size: 1rem;
+    letter-spacing: .92px;
+    text-shadow: $hero-text-shadow;
+
+    @include respond-to(mobile) {
+      font-size: 1.438rem;
+    }
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+}

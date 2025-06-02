@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $body-font-family;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  min-height: 100%;
+  background-color: #F3F3F3;
+}
+
+.container {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 16px;
+}
+
+a {
+  color: $jokaero-orange;
+}

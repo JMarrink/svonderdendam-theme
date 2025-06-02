@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  font-family: $default-button-font;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: .92px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .3s ease;
+
+  &__primary {
+    background-color: $primary-button-color;
+    border-radius: 8px;
+    color: $primary-button-text-color;
+    padding: 15px 20px;
+
+    &:hover {
+      background-color: $primary-button-hover-color;
+    }
+  }
+
+  &__rounded {
+    border-radius: 0px;
+    border-bottom-right-radius: 20px;
+    transition: all .3s ease;
+
+    &:hover {
+      background-color: darken($primary-button-color, 10%);
+      border-bottom-right-radius: 0;
+    }
+  }
+}

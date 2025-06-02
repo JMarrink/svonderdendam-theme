@@ -1,0 +1,148 @@
+.footer {
+  background-color: #fff;
+  padding-top: 20px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    
+    @include respond-to(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__block {
+    padding: 20px 20px;
+    font-family: "open-sans", sans-serif;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0.72px;
+    line-height: 30px;
+
+    p {
+      margin: 20px 0;
+    }
+
+    &--logo {
+      
+      order: 4;
+    }
+
+    &--adress {
+      
+      order: 1;
+    }
+
+    &--teams {
+      
+      order: 2;
+    }
+
+    &--about {
+      
+      order: 3;
+    }
+
+    @include respond-to(tablet) {
+      &--logo {
+        width: 20%;
+        order: 1;
+      }
+
+      &--adress {
+        width: 35%;
+        order: 2;
+      }
+
+      &--teams {
+        width: 25%;
+        order: 3;
+      }
+
+      &--about {
+        width: 25%;
+        order: 4;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__menu {
+    margin-top: 20px;
+  }
+
+  &__menu-item {
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    font-family: "open-sans", sans-serif;
+    font-weight: 600;;
+    font-size: 23px;
+    color: #000000;
+    letter-spacing: 0.92px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+
+  &__logo {
+    max-width: 120px;
+  }
+
+  &__social {
+    font-family: "open-sans", sans-serif;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0.72px;
+
+    h4 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 35px;
+    margin-top: 0;
+
+  }
+
+  &__social-links a {
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+      color: $jokaero-orange;
+    }
+  }
+
+  &__social-links li {
+    margin-right: 20px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #cecece;
+  padding: 10px 0;
+}
