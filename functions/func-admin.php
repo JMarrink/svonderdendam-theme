@@ -40,3 +40,38 @@ function gulp_wp_greeting( $wp_admin_bar ) {
 	}
 }
 add_action( 'admin_bar_menu', 'gulp_wp_greeting', 11 );
+
+// Voeg een custom style 'Button' toe aan de ACF WYSIWYG
+function my_acf_mce_toolbars($toolbars) {
+    if (isset($toolbars['Full'])) {
+        $toolbars['Full'][2][] = 'styleselect';
+    }
+    return $toolbars;
+}
+add_filter('acf/fields/wysiwyg/toolbars', 'my_acf_mce_toolbars');
+
+// Voeg de custom styles toe
+function my_acf_tinymce_styles($init) {
+    $style_formats = array(
+        array(
+            'title'    => 'Knop (Primary)',
+            'selector' => 'a',
+            'classes'  => 'button button__primary button__rounded',
+        ),
+        array(
+            'title'    => 'Knop (Secondary)',
+            'selector' => 'a',
+            'classes'  => 'button button__secondary',
+        ),
+        array(
+            'title'    => 'Knop (Rounded)',
+            'selector' => 'a',
+            'classes'  => 'button button__rounded',
+        ),
+    );
+
+    $init['style_formats'] = json_encode($style_formats);
+
+    return $init;
+}
+add_filter('tiny_mce_before_init', 'my_acf_tinymce_styles');

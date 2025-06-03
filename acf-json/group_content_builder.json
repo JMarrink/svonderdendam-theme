@@ -9,15 +9,15 @@
             "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
-            "required": false,
-            "conditional_logic": false,
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "layouts": [
-                {
+            "layouts": {
+                "layout_682c969e4fee4": {
                     "key": "layout_682c969e4fee4",
                     "name": "hero",
                     "label": "hero",
@@ -112,8 +112,156 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_683d9f3843dfa": {
+                    "key": "layout_683d9f3843dfa",
+                    "name": "club_sponsors",
+                    "label": "Club Sponsors",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_683d9f4543dfc",
+                            "label": "",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_683dbee1394cc": {
+                    "key": "layout_683dbee1394cc",
+                    "name": "match_results",
+                    "label": "Wedstrijdresultaten",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_683dbf4801977": {
+                    "key": "layout_683dbf4801977",
+                    "name": "text_img",
+                    "label": "Tekst met afbeelding",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_683dc44b0c19c",
+                            "label": "Titel",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_683dc4530c19d",
+                            "label": "Tekst",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_683dc45f0c19e",
+                            "label": "Afbeelding",
+                            "name": "img",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_683dc47c0c1a0",
+                            "label": "Positie afbeelding",
+                            "name": "position",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "Links",
+                            "ui_off_text": "Rechts",
+                            "ui": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_683dbfbf4447e": {
+                    "key": "layout_683dbfbf4447e",
+                    "name": "latest_news",
+                    "label": "Nieuws feed",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
                 }
-            ],
+            },
             "min": "",
             "max": "",
             "button_label": "Nieuwe rij"
@@ -133,6 +281,13 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "team"
+            }
         ]
     ],
     "menu_order": 0,
@@ -144,5 +299,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748009320
+    "modified": 1748980196
 }

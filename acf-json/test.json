@@ -1,0 +1,43 @@
+{
+    "key": "group_sponsor_bar",
+    "title": "Sponsor Bar",
+    "fields": [
+        {
+            "key": "field_club_sponsors",
+            "label": "Club Sponsors",
+            "name": "club_sponsors",
+            "type": "repeater",
+            "min": 1,
+            "layout": "table",
+            "button_label": "Voeg sponsor toe",
+            "sub_fields": [
+                {
+                    "key": "field_sponsor_logo",
+                    "label": "Sponsor Logo",
+                    "name": "sponsor_logo",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Balk met sponsoren die horizontaal scrolt"
+}

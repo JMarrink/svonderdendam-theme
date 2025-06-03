@@ -21,43 +21,55 @@
                         Volg ons op:
                     </h4>
                     <ul class="footer__social-links">
-                        <li><a href="https://www.facebook.com/svonderdendam" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="https://www.instagram.com/svonderdendam/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                        <?php if (get_field('facebook', 'option')): ?>
+                            <li><a href="<?= esc_url(get_field('facebook', 'option')); ?>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></li>
+                        <?php endif; ?>
+                        <?php if (get_field('instagram', 'option')): ?>
+                            <li><a href="<?= esc_url(get_field('instagram', 'option')); ?>" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                        <?php endif; ?>
                 </div>
             </div>
             <div class="footer__block footer__block--adress">
-                <h4 class="footer__title">Sportpark Harry Visser</h4>
+                <?php
+                    $adress = (object) get_field('adress', 'option');
+                ?>
+                <h4 class="footer__title"><?= esc_html($adress->title) ?></h4>
                 <p>
-                    Achterweg <br>
-                    89959 PD <br>
-                    Onderdendam
+                    <?= $adress->address_details ?>
                 </p>
                 <ul>
-                    <li><a href="mailto:info@svonderdendam.nl">info@svonderdendam.nl</a></li>
-                    <li><a href="tel:0503049328">050 304 9328</a></li>
+                    <li><a href="mailto:<?= esc_html($adress->email) ?>"><?= esc_html($adress->email) ?></a></li>
+                    <li><a href="tel:<?= esc_html(str_replace(' ', '', $adress->phonenumber)) ?>"><?= esc_html($adress->phonenumber) ?></a></li>
                 </ul>  
             </div>
             <div class="footer__block footer__block--teams">
                 <h4 class="footer__title">Teams</h4>
-                <ul class="footer__menu">
-                    <li><a class="footer__menu-item" href="<?php echo esc_url(home_url('/teams/onderdendam-1/')); ?>">SVO 1</a></li>
-                    <li><a class="footer__menu-item" href="<?php echo esc_url(home_url('/teams/onderdendam-2/')); ?>">SVO 2</a></li>
-                    <li><a class="footer__menu-item" href="<?php echo esc_url(home_url('/teams/onderdendam-3/')); ?>">SVO VR18</a></li>
-                    <li><a class="footer__menu-item" href="<?php echo esc_url(home_url('/teams/onderdendam-vrouwen/')); ?>">35+</a></li>
+                    <?php
+                        wp_nav_menu([
+                            'theme_location' => 'footer-teams',
+                            'container' => false,
+                            'menu_class' => 'footer__menu',
+                            'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                            'link_class' => 'footer__menu-item',
+                        ]);
+                    ?>
             </div>
             <div class="footer__block footer__block--about">
                 <h4 class="footer__title">Over svo</h4>
-                <ul class="footer__menu">
-                    <li><a class="footer__menu-item" href="<?php echo esc_url(home_url('/')); ?>">Sponsoren</a></li>
-                    <li><a class="footer__menu-item" href="<?php echo esc_url(home_url('/over-ons/')); ?>">Contact</a></li>
-                    <li><a class="footer__menu-item" href="<?php echo esc_url(home_url('/teams/')); ?>">Geschiedenis</a></li>
-                    <li><a class="footer__menu-item" href="<?php echo esc_url(home_url('/contact/')); ?>">Lid worden</a></li>
-                </ul>
+                    <?php
+                        wp_nav_menu([
+                            'theme_location' => 'footer-about',
+                            'container' => false,
+                            'menu_class' => 'footer__menu',
+                            'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                            'link_class' => 'footer__menu-item',
+                        ]);
+                    ?>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom__left">
-                <p>&copy; <?php echo date('Y'); ?> SV Onderdendam</p>
+                <p>&copy; <?= date('Y'); ?> SV Onderdendam</p>
             </div>
             <div class="footer-bottom__right">
                 <p>Ontwikkeld door <a href="https://www.muchomedia.nl" target="_blank" rel="noopener noreferrer">Mucho Media</a></p>
