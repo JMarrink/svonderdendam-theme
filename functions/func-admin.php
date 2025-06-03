@@ -75,3 +75,5 @@ function my_acf_tinymce_styles($init) {
     return $init;
 }
 add_filter('tiny_mce_before_init', 'my_acf_tinymce_styles');
+
+add_theme_support('post-thumbnails');
