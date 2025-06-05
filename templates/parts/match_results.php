@@ -41,6 +41,7 @@
                             $home_score = isset($game_details_group['goals_home_team']) ? $game_details_group['goals_home_team'] : '';
                             $away_score = isset($game_details_group['goals_away_team']) ? $game_details_group['goals_away_team'] : '';    ?>
                         <div class="swiper-slide match-results-card">
+                            <a href="<?php the_permalink(); ?>">
                             <div class="match-results-card__header">
                                 <h3><?php echo esc_html($date); ?></h3>
                             </div>
@@ -67,6 +68,7 @@
                                     <div class="match-results-card__name"><?php echo esc_html($away_team); ?></div>
                                 </div>
                             </div>
+                            </a>
                         </div>
                     <?php
                         endwhile;

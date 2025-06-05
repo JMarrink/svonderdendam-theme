@@ -27,6 +27,11 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   &__header {
     font-family: "open-sans", sans-serif;
     font-size: 26px;
