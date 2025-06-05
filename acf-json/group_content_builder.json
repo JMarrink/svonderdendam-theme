@@ -291,6 +291,15 @@
                     "sub_fields": [],
                     "min": "",
                     "max": ""
+                },
+                "layout_6841ac36eeb04": {
+                    "key": "layout_6841ac36eeb04",
+                    "name": "team",
+                    "label": "Team",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -337,5 +346,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1749129900
+    "modified": 1749134404
 }

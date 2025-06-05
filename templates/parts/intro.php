@@ -4,9 +4,11 @@
 			<div class="container">
 				<?php get_template_part('templates/parts/breadcrumbs'); ?>
 				
-				<div class="article__meta">
-					<span class="article__date"><?= get_the_date('j F Y'); ?></span> 
-				</div>
+				<?php if (get_post_type() !== 'team'): ?>
+					<div class="article__meta">
+						<span class="article__date"><?= get_the_date('j F Y'); ?></span> 
+					</div>
+				<?php endif; ?>
 
 				<?php if (get_post_type() !== 'game'): ?>
 					<h1 class="article__title"><?= get_the_title(); ?></h1>
