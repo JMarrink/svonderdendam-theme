@@ -30,6 +30,11 @@ article {
     align-items: center;
     background-color: #68a7402e;
     padding-bottom: 200px;
+    flex-direction: column;
+
+    &--game {
+      padding-bottom: 40px;
+    }
 
     .container {
       flex-direction: column;

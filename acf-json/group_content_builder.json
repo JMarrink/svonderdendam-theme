@@ -22,29 +22,7 @@
                     "name": "intro",
                     "label": "Bericht intro",
                     "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_68405d94f5659",
-                            "label": "test",
-                            "name": "test",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        }
-                    ],
+                    "sub_fields": [],
                     "min": "",
                     "max": ""
                 },
@@ -341,6 +319,13 @@
                 "operator": "==",
                 "value": "team"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "game"
+            }
         ]
     ],
     "menu_order": 0,
@@ -352,5 +337,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1749049356
+    "modified": 1749129900
 }
