@@ -21,9 +21,14 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1200px;
+  width: 100%;
   padding: 0 16px;
 }
 
 a {
   color: $jokaero-orange;
+}
+
+.alignright {
+  float: right;
 }

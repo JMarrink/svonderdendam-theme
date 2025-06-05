@@ -34,3 +34,23 @@
     }
   }
 }
+
+.single {
+  .header {
+    background: #FFF;
+    position: relative;
+    padding: 20px 0;
+
+    .container {
+      margin: 0px auto;
+    }
+  }
+
+  .header__logo {
+    width: 90px;
+  }
+
+  .navigation .menu-item a {
+    color: #000;
+  }
+}

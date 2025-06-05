@@ -17,38 +17,18 @@
                 "id": ""
             },
             "layouts": {
-                "layout_682c969e4fee4": {
-                    "key": "layout_682c969e4fee4",
-                    "name": "hero",
-                    "label": "hero",
+                "layout_684059ee7ba5b": {
+                    "key": "layout_684059ee7ba5b",
+                    "name": "intro",
+                    "label": "Bericht intro",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_682c969e4fedc",
-                            "label": "Titel",
-                            "name": "title",
+                            "key": "field_68405d94f5659",
+                            "label": "test",
+                            "name": "test",
                             "aria-label": "",
                             "type": "text",
-                            "instructions": "",
-                            "required": true,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_682c969e4fee0",
-                            "label": "Introductietekst",
-                            "name": "intro_text",
-                            "aria-label": "",
-                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -59,55 +39,10 @@
                             },
                             "default_value": "",
                             "maxlength": "",
-                            "allow_in_bindings": 1,
-                            "rows": "",
+                            "allow_in_bindings": 0,
                             "placeholder": "",
-                            "new_lines": ""
-                        },
-                        {
-                            "key": "field_682c969e4fee2",
-                            "label": "Achtergrondafbeelding",
-                            "name": "background_image",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": 0,
-                            "min_height": 0,
-                            "min_size": 0,
-                            "max_width": 0,
-                            "max_height": 0,
-                            "max_size": 0,
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_682c969e4fee3",
-                            "label": "Hide block?",
-                            "name": "hide",
-                            "aria-label": "",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": 0,
-                            "message": "",
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
+                            "prepend": "",
+                            "append": ""
                         }
                     ],
                     "min": "",
@@ -139,6 +74,84 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68402be958216": {
+                    "key": "layout_68402be958216",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68402bf958218",
+                            "label": "Titel",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_68402c0258219",
+                            "label": "Tekst",
+                            "name": "intro_text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_68402c165821a",
+                            "label": "Achtergrond",
+                            "name": "background_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
                         }
                     ],
                     "min": "",
@@ -252,10 +265,50 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_683ff8688ec2c": {
+                    "key": "layout_683ff8688ec2c",
+                    "name": "text",
+                    "label": "Tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_683ff8728ec2e",
+                            "label": "Tekst",
+                            "name": "content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_683dbfbf4447e": {
                     "key": "layout_683dbfbf4447e",
                     "name": "latest_news",
                     "label": "Nieuws feed",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68406005a6d59": {
+                    "key": "layout_68406005a6d59",
+                    "name": "share",
+                    "label": "Share",
                     "display": "block",
                     "sub_fields": [],
                     "min": "",
@@ -299,5 +352,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748980196
+    "modified": 1749049356
 }

@@ -1,0 +1,15 @@
+.text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  
+  &__container {
+    background-color: #fff;
+    padding: 0px 60px;
+  }
+
+  img {
+    margin: 10px;
+  }
+}

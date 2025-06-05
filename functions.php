@@ -35,3 +35,30 @@ function enqueue_swiper_assets() {
     wp_enqueue_script('custom-swiper-init', get_template_directory_uri() . '/assets/js/dist/swiper-init.min.js', array('swiper-js'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
+
+
+// add_filter('acf/load_field/key=field_content_builder', function ($field) {
+//     if (!is_admin()) {
+//         return $field;
+//     }
+
+//     $screen = get_current_screen();
+//     if (!$screen) return $field;
+
+//     $is_homepage = false;
+
+//     if ($screen->post_type === 'page' && isset($_GET['post'])) {
+//         $post_id = (int) $_GET['post'];
+//         $is_homepage = (get_option('page_on_front') == $post_id);
+//     }
+
+//     if (!$is_homepage) {
+//         $layouts_to_remove = ['hero'];
+
+//         $field['layouts'] = array_filter($field['layouts'], function ($layout) use ($layouts_to_remove) {
+//             return !in_array($layout['name'], $layouts_to_remove, true);
+//         });
+//     }
+
+//     return $field;
+// });
