@@ -1,0 +1,143 @@
+.team {
+  padding-top: 40px;
+  &__header {
+    // background-color: #fff;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 65%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.team-agenda {
+  background-color: #fff;
+  padding: 0 15px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+  flex-basis: 0;
+
+  &__no-match {
+    text-align: center;
+  }
+
+  &--details {
+    text-align: center;
+    padding-top: 20px;
+      flex-grow: 1;
+  flex-basis: 0;
+  }
+
+  &--date {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &__team {
+      flex-grow: 1;
+  flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__logo {
+    img {
+      width: 100px;
+    }
+
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}
+
+.team-selection {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 0;
+  }
+
+  &__data {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 19px;
+  }
+
+  &__function {
+    font-size: 15px;
+    color: #828282;
+  }
+
+  &__shirt-number {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    color: #828282;
+  }
+
+  &__item {
+    list-style: none;
+    background-color: #fff;
+  }
+
+  &__img {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.team-sponsor {
+  padding: 0 20px;
+  margin-top: 20px;
+  &__slide {
+    text-align: center;
+    height: 120px !important;
+    display: flex !important;
+        flex-direction: column;
+    justify-content: center;
+    img {
+      max-width: 100%;
+    }
+  }
+}

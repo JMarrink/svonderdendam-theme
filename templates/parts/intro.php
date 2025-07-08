@@ -1,6 +1,6 @@
 
 
-		<section class="article__header<?php if (get_post_type() === 'game') echo ' article__header--game'; ?>">
+		<section class="article__header<?php if (in_array(get_post_type(), ['game', 'team'])) echo ' article__header--game'; ?>">
 			<div class="container">
 				<?php get_template_part('templates/parts/breadcrumbs'); ?>
 				

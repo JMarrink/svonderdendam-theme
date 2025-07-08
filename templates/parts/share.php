@@ -3,9 +3,9 @@
         <div class="share-page__block">
             <?php
             $post_type = get_post_type();
-            $label = ($post_type === 'game') ? 'wedstrijd' : 'pagina';
+            $label = ($post_type === 'game') ? 'deze wedstrijd' : 'deze pagina';
             ?>
-            <div class="share-page__text">Deel deze <?= $label ?></div>
+            <div class="share-page__text">Deel <?= $label ?></div>
             <div class="share-page__icons">
                 <a class="share-page__icon" href="https://wa.me/?text=<?= urlencode(get_permalink()); ?>" target="_blank" rel="noopener">
                     <i class="fa-brands fa-whatsapp"></i>
