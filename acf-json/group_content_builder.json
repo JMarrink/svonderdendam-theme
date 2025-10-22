@@ -384,6 +384,15 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_687a199231ddd": {
+                    "key": "layout_687a199231ddd",
+                    "name": "contact",
+                    "label": "Contact",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -430,5 +439,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751885461
+    "modified": 1752832407
 }

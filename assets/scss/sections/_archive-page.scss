@@ -1,0 +1,35 @@
+.archive-page {
+  &__header {
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  article {
+    background-color: #FFF;
+    flex: 1;
+    a {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+  }
+
+  &__post-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #000;
+  }
+
+  &__post-content {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

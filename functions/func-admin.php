@@ -11,7 +11,7 @@
  * Credit in admin footer
  */
 function gulp_wp_admin_footer() {
-	echo 'Developed by <a href="https://muchomedia.nl" target="_blank" rel="noreferrer noopener">Mucho Media</a>. ';
+	echo 'Ontwikkeld door: <a href="https://muchomedia.nl" target="_blank" rel="noreferrer noopener">Mucho Media</a>. ';
 }
 add_filter( 'admin_footer_text', 'gulp_wp_admin_footer' );
 

@@ -7,7 +7,6 @@
                         $content = $acf->content_builder ?? '';
                         $team_img = get_sub_field('team_img');
                         $team_id = $acf->team_id ?? null;
-                        // var_dump($team_id); // Debugging line to check team_id
                     ?>
 
                 <img src="<?= $team_img['url'] ?>" alt="">
@@ -16,27 +15,44 @@
                 <h3 class="team-agenda__title">Volgende wedstrijd</h3>
                 <?php
                 $match = clubdata_get_next_match_by_team_id($team_id);
+                $ams_tz = new DateTimeZone('Europe/Amsterdam');
+                $ts = false;
+                if ($match && !empty($match->datetime)) {
+                    $dt_obj = DateTimeImmutable::createFromFormat('Y-m-d H:i:s', $match->datetime, $ams_tz);
+                    if ($dt_obj) { $ts = $dt_obj->getTimestamp(); }
+                }
+                $match_day = $ts ? ucfirst(wp_date('l', $ts, $ams_tz)) : '';
+                $match_daymonth = $ts ? wp_date('j F', $ts, $ams_tz) : '';
+                $match_time = $ts ? wp_date('H:i', $ts, $ams_tz) : '';
                 ?>
 
-                <?php if (!$match): ?>
+                <?php if ($match): ?>
                 <div class="team-agenda__details">
                     <div class="team-agenda__team">
                         <div class="team-agenda__logo">
-                            <img src="http://svo.test/wp-content/uploads/2025/04/logo.svg" alt="">
+                            <?php if (!empty($match->home_logo_url)): ?>
+                                <img src="<?= esc_url($match->home_logo_url) ?>" alt="">
+                            <?php else: ?>
+                                <img src="http://svo.test/wp-content/uploads/2025/04/logo.svg" alt="">
+                            <?php endif; ?>
                         </div>
-                        <div class="team-agenda__name">SVO 1</div>
+                        <div class="team-agenda__name"><?= $match->home_team ?></div>
                     </div>
                     <div class="team-agenda--details">
                         <div class="team-agenda--date-time">
-                            <div class="team-agenda--date">Zaterdag <br>1 juni</div>
-                            <div class="team-agenda--time">14:00</div>
+                            <div class="team-agenda--date"><?= esc_html($match_day) ?> <br><?= esc_html($match_daymonth) ?></div>
+                            <div class="team-agenda--time"><?= esc_html($match_time) ?></div>
                         </div>
                     </div>
                     <div class="team-agenda__team">
                         <div class="team-agenda__logo">
-                            <img src="http://svo.test/wp-content/uploads/2025/05/Logo-SV-Bedum-30x30-vector-zonder-rand.png" alt="">
+                            <?php if (!empty($match->away_logo_url)): ?>
+                                <img src="<?= esc_url($match->away_logo_url) ?>" alt="">
+                            <?php else: ?>
+                                <img src="http://svo.test/wp-content/uploads/2025/05/Logo-SV-Bedum-30x30-vector-zonder-rand.png" alt="">
+                            <?php endif; ?>
                         </div>
-                        <div class="team-agenda__name">SV Bedum 7</div>
+                        <div class="team-agenda__name"><?= $match->away_team ?></div>
                     </div>
                 </div>
                 <?php else: ?>
@@ -113,7 +129,6 @@
                                     </span>
                                     <span class="team-selection__function"><?php echo esc_html($staffMember->position ?? ''); ?></span>
                                 </div>
-                                <div class="team-selection__shirt-number"><?php echo esc_html($staffMember->shirt_number ?? ''); ?></div>
                             </div>
                         </li>
                     <?php endforeach; ?>
@@ -140,6 +155,9 @@
                                                 echo esc_html($voornaam . ' ' . $achternaam);
                                             } else {
                                                 echo esc_html($player->name ?? '');
+                                            }
+                                            if ($player->captain == 1) {
+                                                echo ' <span class="captain-badge">C</span>';
                                             }
                                         ?>
                                     </span>

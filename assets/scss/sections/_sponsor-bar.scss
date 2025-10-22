@@ -1,14 +1,14 @@
 .sponsor-bar {
   width: 100%;
   overflow: hidden;
-  background: #fff;
+  background: #FFF;
   padding: 20px 0;
 
   &__track {
     display: flex;
     width: max-content;
     animation: scroll 60s linear infinite;
-    animation-play-state: paused; // standaard uit
+    // animation-play-state: paused; // standaard uit
   }
 
   &__sponsor {
@@ -23,7 +23,7 @@
     width: 100%;
     height: 80px; // Pas aan naar wens
     object-fit: contain;
-    filter: brightness(10%);
+    // filter: brightness(10%);
     transition: filter 0.3s ease;
 
     // &:hover {
